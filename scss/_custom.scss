@@ -1,0 +1,139 @@
+/* -------------------------------------------------------------------------- */
+/*                             I MIEI STILI CUSTOM                            */
+/* -------------------------------------------------------------------------- */
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg {
+    background: rgb(65,169,89);
+    background: linear-gradient(45deg, rgba(65,169,89,1) 20%, rgba(2,34,90,1) 53%);
+    width: 120%;
+    height: 900px;
+    border-radius: 50% / 30%;
+    left: -10%;
+    top: -80px;
+    z-index: -1;
+        
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         MIXIN PER LA BOOTSTRAP GRID                        */
+/* -------------------------------------------------------------------------- */
+
+.contentHero {
+    @include make-row();
+    
+}
+
+.heroImg {
+    @include make-col-ready();
+
+    @include make-col(12);
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(6);
+    }
+}
+
+.textBox {
+    @include make-col-ready();
+
+    @include make-col(12);
+
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(6);
+        text-align: left;
+        
+    }
+}
+
+.features {
+    @include make-row();
+}
+
+.feature {
+    @include make-col-ready();
+    @include make-col(12);
+
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
+        
+    }
+}
+
+.details {
+    @include make-row();
+    align-items: center
+
+}
+
+.detail {
+    @include make-col-ready();
+    @include make-col(12);
+
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(6);
+        text-align: left;
+        
+    }
+}
+
+#testimonials {
+    background-color: $bgTestimonial
+}
+
+.footer{
+    @include make-row();
+}
+
+.footerElSm {
+    @include make-col-ready();
+    @include make-col(6);
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(2);
+        
+    }
+}
+
+.footerElLg {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
+    }
+}
+
+.copyright {
+    background-color: $bgDarkGray;
+}
+
+#socialIcon i {
+    background-color: $bgDarkGray;
+}
+
+/* --------------------------------- SWIPER --------------------------------- */
+
+.swiper {
+  width: 95%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
